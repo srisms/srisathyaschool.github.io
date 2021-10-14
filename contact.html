@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link href="node_modules/sweetalert2/sweetalert2.css" rel="stylesheet" />
+    <link rel="icon" href="images/logo.png" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $(".toTop").fadeIn();
+          } else {
+            $(".toTop").fadeOut();
+          }
+        });
+        $(".toTop").click(function () {
+          $("html,body").animate({ scrollTop: 0 }, 600);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="Images/school logo-pdf.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="Academy.html">ACADEMY</a></li>
+            <li><a href="Admission.html">ADMISSION</a></li>
+            <li><a href="online-learning.html">ONLINE LEARNING</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="news.html">NEWS</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Contact Us</h1>
+    </section>
+    <!-------------------COntact Us-------------------->
+
+    <section class="location">
+      <h1>Location</h1>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577.7738753546951!2d80.09571029046303!3d13.049426437040259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a75a80336cb%3A0x412c4363050e8c4e!2sShri%20Sathya%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1621668257107!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <section class="contact-us">
+      <div class="row">
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>
+              <h5>No.9, JCN Street</h5>
+              <p>Poonamallee, Chennai-600056, TamilNadu, IN</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>
+              <h5>+91 7305831134</h5>
+              <h5>+044 43227962</h5>
+              <p>Monday To Friday, 10AM to 4PM</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <span>
+              <h6>srisathyaschoolwebsite@gmail.com</h6>
+              <p>Email us your enquiry</p>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+          <h1>Leave Comment</h1>
+          <form
+            action="https://formsubmit.co/srisathyaschoolwebsite@gmail.com"
+            method="POST"
+            class="contactForm"
+            id="contactForm"
+          >
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input
+              type="text"
+              class="name"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <input
+              type="email"
+              class="email"
+              id="email"
+              name="email"
+              placeholder="Enter email address"
+            />
+
+            <input
+              type="phone"
+              class="phone"
+              id="phone"
+              name="phone"
+              placeholder="Enter Phone Number"
+            />
+
+            <input
+              type="text"
+              class="qualification"
+              id="qualification"
+              name="qualification"
+              placeholder="Enter your class or Qualification"
+              required
+            />
+
+            <textarea
+              rows="8"
+              class="message"
+              id="message"
+              name="message"
+              placeholder="Enter your Message"
+              required
+            ></textarea>
+
+            <button value="send" type="submit" class="hero-btn red-btn">
+              Submit
+            </button>
+
+            <input target="_blank" type="hidden" name="_next" value="https://srisathyaschool.rf.gd">
+
+            <p>
+              <i class="fa fa-star"></i> Enter valid credentials.<br /><i
+                class="fa fa-star"
+              ></i>
+              You will recieve the email regarding your queries within 4 days.
+            </p>
+
+            <input type="hidden" name="_template" value="table" />
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+
+    <!-------------Footer--------------------->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h1><i class="fas fa-map-marker-alt"></i> Address</h1>
+            <ul>
+              <h4>Main School</h4>
+              <li>
+                <a href=""
+                  >No.9, JCN Street, Poonamallee,<br />Chennai-600056.</a
+                >
+              </li>
+              <h4>Branch School</h4>
+              <li>
+                <a href=""
+                  >No.1/69, Anjaneyar Koil Street,<br />
+                  Banaveduthottam, Chennai-600056.</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h1><i class="fas fa-phone-alt"></i> Phone</h1>
+            <ul>
+              <li><a href="tel:7305831134">+91 7305831134</a></li>
+              <li><a href="tel:04443227962">+044 43227962</a></li>
+              <h1><i class="fas fa-envelope"></i> Email</h1>
+              <li><a href="mailto:srisathyamhss@gmail.com">srisathyamhss@gmail.com</a></li>
+              <li><a href="mailto:srisathyaschoolwebsite@gmail.com">srisathyaschoolwebsite@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h1>follow us</h1>
+            <div class="social-links">
+              <a href="https://www.ssms.rf.gd" target="_blank"><i class="fas fa-globe"></i></i></a>
+              <a href="https://web.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--------------Java Script for Toggle Menu----------------->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <div class="toTop">
+      <a href="javascript:void(0);"><span class="fa fa-chevron-up"></span></a>
+    </div>
+  </body>
+</html>
